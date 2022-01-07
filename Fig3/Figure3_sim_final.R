@@ -10,7 +10,7 @@ library(viridis)
 library(ggpubr)
 
 setwd('')
-posterior_file = 'TruePosterior_1_29_21.csv'
+posterior_file = '../data/TruePosterior_1_29_21.csv'
 posterior_df = read.csv(posterior_file, header=TRUE)
 names(posterior_df) <- c('beta', 'sigma1', 'simga2')
 set.seed(1223)
