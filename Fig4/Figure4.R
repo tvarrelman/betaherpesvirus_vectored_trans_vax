@@ -92,13 +92,13 @@ for (i in 1:length(betap.list)){
   SSP <- b*((1/(d+delt))-(1/betap))
   SSR <- (b*delt*((1/(d+delt))-(1/betap)))/(d)
   E0 <- SSS*0.01
-  SSS2 <- SSS-E0
+  #SSS2 <- SSS-E0
   df_total = data.frame()
   rho_thresh = (sig*(d+delt-betap)*betav)/(betap*(d*(d+sig)-sig*betav))
   print(rho_thresh)
   for (j in 1:length(rho.list)){
     rho <- rho.list[j]
-    state1 <- c(S = SSS2, E=E0, Ep=0, Er=0, V=0, Vp=0, Vr=0, P=SSP, R=SSR)
+    state1 <- c(S = SSS, E=E0, Ep=0, Er=0, V=0, Vp=0, Vr=0, P=SSP, R=SSR)
     parameters <- c(b=b, betap=betap, betav=betav, d=d, sig=sig, delt=delt, rho=rho)
     # transmission blocking
     out <- ode(y = state1, times = times, func = CMV_mod2, parms = parameters, method="ode45")
