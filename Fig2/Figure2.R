@@ -4,8 +4,8 @@ library(ggplot2)
 library(viridis)
 library(ggrepel)
 
-final.df <- read.csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/Figure2Sim_2_10_21.csv', header=TRUE)
-path.file <- '/Users/tannervarrelman/Documents/MCMV_project_5_20/PaperFigures/Figure1_pathogen_ests.csv'
+final.df <- read.csv('Figure2Sim_2_10_21.csv', header=TRUE)
+path.file <- '../data/Pathogen_ests.csv'
 path.df <- read.csv(path.file, header=TRUE)
 
 # Find the reduction time for specific parameters
