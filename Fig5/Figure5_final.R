@@ -20,7 +20,7 @@ CMV_mod <- function(t, state, parameters){
   })
 }
 
-file <- 'GormanBetavEsts_1_5_21.csv'
+file <- '../data/GormanBetavEsts.csv'
 beta.df <- read.csv(file, header=TRUE)
 
 # d is chosen based on a lifespan of 365 days
