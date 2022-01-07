@@ -10,10 +10,8 @@ import pandas as pd
 import numpy as np
 from statistics import mode
 
-sims = pd.read_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/Figure3Sim_6_28_21.csv')
-# sims = pd.read_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/Figure3Sim_2_24_21.csv')
-# sims = pd.read_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/Figure3Sim_reduced_eff_2_24_21.csv')
-# sims = pd.read_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/Figure3Sim_reduc_3_8_21.csv')
+sims = pd.read_csv('Figure3Sim_3_8_21.csv')
+
 LASV_sub = sims[sims['Path.label']=='Lassa virus'].reset_index(drop=True)
 LCMV_sub = sims[sims['Path.label']=='Lymphocytic choriomeningitis virus'].reset_index(drop=True)
 
@@ -81,8 +79,8 @@ for time in range(0,3000):
                                 'ReducMax':max_LCMV_time,
                                 'ReducMean':mean_LCMV_time}, ignore_index=True)
 
-new_LCMV.to_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/LCMV_figure3_6_28_21.csv', header=True, index=False)
-new_LASV.to_csv('/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/LASV_figure3_6_28_21.csv', header=True, index=False)
+new_LCMV.to_csv('LCMV_figure3_6_28_21.csv', header=True, index=False)
+new_LASV.to_csv('LASV_figure3_6_28_21.csv', header=True, index=False)
 
 
 
