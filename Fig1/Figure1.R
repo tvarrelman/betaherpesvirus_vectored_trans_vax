@@ -1,7 +1,7 @@
 library(ggplot2)
 library(ggExtra)
 
-file.path <- ''
+file.path <- '../data/'
 file <- 'TruePosterior_1_29_21.csv'
 my.file <- paste(file.path, file, sep="")
 data <- read.csv(my.file, header=TRUE)
