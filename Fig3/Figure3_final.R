@@ -9,8 +9,8 @@ library(plotly)
 library(viridis)
 library(ggpubr)
 
-LCMV_sub_file = '/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/LCMV_figure3_3_8_21.csv'
-LASV_sub_file = '/Users/tannervarrelman/Documents/MCMV_project_5_20/DurationPathData/LASV_figure3_3_8_21.csv'
+LCMV_sub_file = 'LCMV_figure3_3_8_21.csv'
+LASV_sub_file = 'LASV_figure3_3_8_21.csv'
 
 LCMV_sub <- read.csv(LCMV_sub_file, header=TRUE)
 LASV_sub <- read.csv(LASV_sub_file, header=TRUE)
